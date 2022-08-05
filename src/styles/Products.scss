@@ -1,0 +1,51 @@
+.products-container {
+  margin-left: 165px;
+  margin-right: 165px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+
+  hr {
+    width: 1200px;
+    background-color: #525252;
+    border-radius: 1px;
+  }
+
+
+  input {
+    width: 150px;
+    height: 25px;
+    margin: 20px;
+    border: none;
+    font-size: 14px;
+
+  }
+
+  select {
+    width: 150px;
+    height: 25px;
+    margin: 10px;
+    border: none;
+    font-size: 14px;
+  }
+
+  button {
+    float: right;
+    width: 150px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+    }
+
+  }
+
+}

@@ -1,0 +1,19 @@
+@import "src/styles/Header.scss";
+@import "styles/SearchBar";
+@import "styles/SearchMenu";
+@import "styles/Route";
+@import "styles/CatalogBody";
+@import "styles/Products";
+
+.app-wrapper {
+  margin: 0 auto;
+  width: 1440px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: lighter;
+  background-color: #E5E5E5;
+  color: black;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}

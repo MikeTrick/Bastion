@@ -1,0 +1,136 @@
+.catalog-body__wrapper {
+  display: flex;
+  flex-direction: column;
+
+
+  .catalog-container {
+    background-color: #E6E6E6;
+    display: flex;
+    flex-direction: column;
+
+
+    .route {
+      margin-left: 150px;
+      display: flex;
+      justify-content: flex-start;
+      color: #B3B3B3;
+      font-size: 12px;
+
+      &_element {
+        margin: 15px;
+
+        span {
+          color: black;
+          font-weight: bold;
+        }
+
+      }
+    }
+
+    h1 {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 165px;
+    }
+  }
+
+  .catalog-wrapper {
+    display: flex;
+    background-color: white;
+    width: 1110px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+
+
+    &_list {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-self: center;
+
+
+      .catalog-card__upper {
+        background-color: #F2F2F2;
+        width: 44%;
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+
+        img {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          mix-blend-mode: darken;
+
+        }
+
+
+        h2 {
+          padding-left: 27px;
+        }
+
+        &_items {
+          font-weight: bold;
+          font-size: 16px;
+
+        }
+
+        &_item {
+          margin: 27px;
+        }
+
+      }
+
+    }
+  }
+
+  .catalog-card {
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #F2F2F2;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 0;
+
+    &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+    }
+
+    span {
+      padding-left: 27px;
+    }
+
+
+  }
+
+  .callBack-wrapper {
+
+    width: 1110px;
+    background-color: white;
+    margin-top: 40px;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    border-radius: 8px;
+
+    .callBack-content {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px;
+    }
+  }
+}
