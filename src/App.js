@@ -24,7 +24,8 @@ function App() {
                     <Route path='/types'
                            element={<ProductsTypes />}
                     />
-                    <Route path='/cart' element={<Cart />}></Route>
+                    <Route path='/cart'
+                           element={<Cart />}/>
                 </Routes>
             </BrowserRouter>
             {/*<Cart/>*/}

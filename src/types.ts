@@ -21,11 +21,16 @@ export interface IProduct {
     name: string,
     price: number,
     standart: string,
+    productType: string,
 }
 
+export interface ICartProduct extends IProduct {
+    productTypeName: string
+}
 
-export interface IProductType extends IOption {
+export interface IProductType {
     id: string,
+    name: string,
 }
 
 export interface IOption {

@@ -1,7 +1,5 @@
 import React from "react";
 
-import ItemImage from '../../images/cart-item.png'
-
 
 export const Cart = () => {
     return (
@@ -9,35 +7,7 @@ export const Cart = () => {
             <h1>
                 КОРЗИНА
             </h1>
-            <div className="cart-items_wrapper">
-                <div className="cart-items">
-                    <div className="cart-item">
-                        <div className="cart-item__img">
-                            <img src={ItemImage} alt=''/>
-                        </div>
-                        <div className="cart-item__info">
-                            <div className="cart-item__info_standart">
-                                ГОСТ 14911-82
-                            </div>
-                            <div className="cart-item__info_name">
-                                Name
-                            </div>
-                            <div className="cart-item__info_price">
-                                Price
-                            </div>
-                        </div>
-                        <div className="cart-item__quantity">
-                            Quantity + and -
-                        </div>
-                        <div className="cart-item__total-price">
-                            Total Price
-                        </div>
-                        <div>
-                            <button>DeleteBtn</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div className="cart-sidebar_wrapper">
                 <h2>Заказ</h2>
                 <div className="cart-sidebar_client">
