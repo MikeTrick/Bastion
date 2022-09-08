@@ -1,6 +1,6 @@
 import {AnyActionType, initialProductsState} from "../../types";
 import {INITAIL_PRODUCTS_STATE} from "../initial/state";
-import {PRODUCT_ACTIONS} from "../actions/products/productActions.enum";
+import {PRODUCT_ACTIONS} from "../actions/products/Actions.enum";
 
 export const productReducer = (state: initialProductsState = INITAIL_PRODUCTS_STATE, action: AnyActionType) => {
     switch (action.type) {

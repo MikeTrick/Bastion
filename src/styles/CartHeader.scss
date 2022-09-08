@@ -1,16 +1,16 @@
-.search-menu-wrapper_favorites {
+.search-menu-wrapper_cart {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 35px;
-  font-size: 12px;
-  font-weight: lighter;
+  margin-right: 165px;
+
 
   button {
     background: none;
     border: none;
     font-size: 12px;
     font-weight: lighter;
+
   }
 }

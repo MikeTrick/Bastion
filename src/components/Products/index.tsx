@@ -5,7 +5,7 @@ import {useMemo, useState} from "react";
 import {useActions} from "../../hooks";
 import {useSelector} from "react-redux";
 import {IOption, IState} from "../../types";
-import {getCartState} from "../../redux/selectors";
+import {getMainProductsState} from "../../redux/selectors";
 import {ProductItem} from "../ProductItem";
 
 export const Products = () => {
@@ -21,7 +21,7 @@ export const Products = () => {
         productType: '',
     })
 
-    const products = useSelector(getCartState.getCartProducts)
+    const products = useSelector(getMainProductsState.getCartProducts)
 
     const renderProducts = useMemo(() => (
         <div className="cart-items_wrapper">

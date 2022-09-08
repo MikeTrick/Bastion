@@ -1,0 +1,131 @@
+.container {
+  height: 700px;
+  overflow-y: scroll;
+
+  h1 {
+    margin-left: 175px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+    transition-duration: 0.3s;
+  }
+
+  .cart-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+    .cart-product-wrapper {
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1px solid #525252;
+
+      .cart-product {
+        display: flex;
+        justify-content: space-around;
+
+        &_image {
+
+        }
+
+        &_elements {
+
+
+          &__standart {
+            background-color: rgba(201, 62, 51, 0.1);
+            border-radius: 5px;
+            color: #C93E33;
+            font-size: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          &__name {
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          &__price {
+            font-weight: bold;
+            font-size: 15px;
+            color: #B3B3B3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      .cart-product-total {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &_quantity {
+
+        }
+
+        &_price {
+          display: flex;
+          justify-self: center;
+          align-self: center;
+          font-size: 18px;
+          font-weight: bold;
+          margin-left: 20px;
+        }
+
+        &_delete-button {
+          button {
+            border: none;
+            background: transparent;
+
+            &:hover {
+              cursor: pointer;
+              transform: scale(0.97);
+              transition-duration: 0.3s;
+            }
+          }
+
+        }
+      }
+    }
+
+    .cart-sidebar_wrapper {
+
+      .cart-sidebar_order {
+        //display: flex;
+        //flex-direction: column;
+        //align-items: center;
+        //justify-content: flex-end;
+        position: absolute;
+        right: 245px;
+        top: 300px;
+
+
+        &__buttons {
+          display: flex;
+          flex-direction: column;
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+        }
+      }
+    }
+
+  }
+
+}

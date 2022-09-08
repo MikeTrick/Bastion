@@ -1,15 +1,28 @@
 .search-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 10px;
-}
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  width: 546px;
+  height: 42px;
 
+  &_img {
+    margin: 16px;
+  }
 
-.search-wrapper_button-enter {
+  input {
+    border: none;
+  }
 
-
-  button{
-    background-color: white;
+  &_button-enter {
+    button{
+      background-color: white;
+      border: none;
+      margin: 16px;
+    }
   }
 }
+
+

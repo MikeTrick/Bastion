@@ -11,7 +11,7 @@ export const SearchBar = () => {
                 <img src={ZoomLogo} alt=""/>
             </div>
             <div className="search-wrapper_input">
-                <input type="text" placeholder='Поиск по названию'/>
+                <input type="text" placeholder='Поиск по названию...'/>
             </div>
             <div className="search-wrapper_button-enter">
                 <button>

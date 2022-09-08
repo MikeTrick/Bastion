@@ -1,5 +1,5 @@
 import {IProduct, IProductType} from "../../../types";
-import {PRODUCT_ACTIONS} from "./productActions.enum";
+import {PRODUCT_ACTIONS} from "./Actions.enum";
 import {AnyAction} from "redux";
 
 const addProduct = (payload: IProduct): AnyAction => ({

@@ -9,6 +9,7 @@ import ArrowDown from "../../images/ArrowDown.png";
 import Letter from "../../images/Letter.png";
 import {Route} from "../Route/Route";
 import {SearchMenu} from "../SearchMenu/SearchMenu";
+import {NavLink} from "react-router-dom";
 
 
 export const Header = () => {
@@ -52,14 +53,16 @@ export const Header = () => {
             </div>
 
             <div className="search-menu__wrapper">
-                <div className="search-menu__wrapper_logo">
-                    <div>
-                        <img src={BastionLogo} alt=""/>
+                <NavLink to='/'>
+                    <div className="search-menu__wrapper_logo">
+                        <div>
+                            <img src={BastionLogo} alt=""/>
+                        </div>
+                            <span>
+                                Производитель <br/> металлических <br/> изделий №1
+                            </span>
                     </div>
-                    <div>
-                        Производитель металлических изделий №1
-                    </div>
-                </div>
+                </NavLink>
                 <SearchMenu/>
             </div>
             <Route/>

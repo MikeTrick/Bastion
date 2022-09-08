@@ -2,12 +2,10 @@
   display: flex;
   flex-direction: column;
 
-
   .catalog-container {
     background-color: #E6E6E6;
     display: flex;
     flex-direction: column;
-
 
     .route {
       margin-left: 150px;
@@ -23,17 +21,17 @@
           color: black;
           font-weight: bold;
         }
-
       }
     }
-
-    h1 {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin-left: 165px;
-    }
   }
+
+  h1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 165px;
+  }
+
 
   .catalog-wrapper {
     display: flex;
@@ -43,14 +41,12 @@
     justify-content: center;
     align-items: center;
 
-
     &_list {
       box-sizing: border-box;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       align-self: center;
-
 
       .catalog-card__upper {
         background-color: #F2F2F2;
@@ -67,9 +63,7 @@
           right: 0;
           bottom: 0;
           mix-blend-mode: darken;
-
         }
-
 
         h2 {
           padding-left: 27px;
@@ -78,15 +72,12 @@
         &_items {
           font-weight: bold;
           font-size: 16px;
-
         }
 
         &_item {
           margin: 27px;
         }
-
       }
-
     }
   }
 
@@ -100,37 +91,24 @@
     flex-direction: column;
     margin: 30px;
     align-items: flex-start;
-    justify-content: center;
-    z-index: 0;
+    justify-content: flex-start;
+    height: 250px;
 
-    &__img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-
+    &_img {
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        mix-blend-mode: darken;
+      }
     }
 
     span {
+      padding-top: 20px;
       padding-left: 27px;
-    }
-
-
-  }
-
-  .callBack-wrapper {
-
-    width: 1110px;
-    background-color: white;
-    margin-top: 40px;
-    display: flex;
-    align-self: center;
-    justify-content: space-around;
-    border-radius: 8px;
-
-    .callBack-content {
       display: flex;
-      justify-content: space-around;
-      margin: 40px;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 }

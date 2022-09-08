@@ -1,5 +1,6 @@
 export interface IState {
-    products: initialProductsState
+    products: initialProductsState,
+    cart: ICartState,
 }
 
 export interface initialProductsState {
@@ -21,11 +22,16 @@ export interface IProduct {
     name: string,
     price: number,
     standart: string,
-    productType: string,
+    productType?: string,
 }
 
 export interface ICartProduct extends IProduct {
-    productTypeName: string
+    quantity: number,
+    totalPrice: number,
+}
+
+export interface IMainProduct extends IProduct {
+    productTypeName?: string
 }
 
 export interface IProductType {
@@ -41,4 +47,13 @@ export interface IOption {
 export type AnyActionType = {
     type: string,
     payload?: any
+}
+
+export interface ICartState {
+    products: Array<ICartProduct>,
+    totalPrice: number,
+}
+
+export interface IProductItemProps extends ICartProduct {
+    changeProduct: (product: ICartProduct) => void
 }

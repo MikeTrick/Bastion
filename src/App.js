@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {Products} from "./components/Products";
 import {ProductsTypes} from "./components/ProductsTypes/ProductsTypes";
 import {Cart} from "./components/Cart/Cart";
+import {Footer} from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -22,13 +23,16 @@ function App() {
                         element={<Products/>}
                     />
                     <Route path='/types'
-                           element={<ProductsTypes />}
+                           element={<ProductsTypes/>}
                     />
                     <Route path='/cart'
-                           element={<Cart />}/>
+                           element={<Cart/>}/>
+                    <Route path='/catalog'
+                           element={<CatalogBody/>}
+                    />
                 </Routes>
             </BrowserRouter>
-            {/*<Cart/>*/}
+            <Footer/>
         </div>);
 }
 

@@ -1,63 +1,99 @@
-import React from "react";
-
+import React, {useEffect} from "react";
+import {ProductItem} from "../ProductItem";
+import CartImage from '../../images/Cart.png'
+import FileImage from '../../images/file.png'
+import {useSelector} from "react-redux";
+import {getCartState} from "../../redux/selectors";
+import {useActions} from "../../hooks";
+import {cartActions} from "../../redux/actions/products/cartActions";
+import PersonImg from '../../images/user.png'
+import PhoneSide from '../../images/phone2.png'
+import AtSign from '../../images/at-sign.png'
+import BriefCase from '../../images/briefcase.png'
 
 export const Cart = () => {
+    const products = useSelector(getCartState.cartProductsSelector);
+    const totalSum = useSelector(getCartState.cartTotalSumSelector);
+    const {changeProduct, changeTotalSum} = useActions(cartActions)
+
+    useEffect(() => {
+        debugger;
+        changeTotalSum(products.reduce((acc, curr) => (acc + Number
+            .parseFloat(`${curr.totalPrice}`)), 0))
+    }, [products])
+
     return (
-        <div className="cart-wrapper">
+        <div className='container'>
             <h1>
                 КОРЗИНА
             </h1>
-
-            <div className="cart-sidebar_wrapper">
-                <h2>Заказ</h2>
-                <div className="cart-sidebar_client">
-                    <div>
-                        Контактная информация
-                    </div>
-                    <div>
-                        ФИО
-                    </div>
-                    <div className="cart-sidebar_client-info">
-                        <div className="cart-sidebar_client-info__element">
-                            <img src="" alt="name"/>
-                            <input type="text" placeholder='Иванов Иван Иванович'/>
-                        </div>
-                        <div className="cart-sidebar_client-info__element">
-                            <img src="" alt="phonr"/>
-                            <input type="text" placeholder='Контактный телефон'/>
-                        </div>
-                        <div className="cart-sidebar_client-info__element">
-                            <img src="" alt="mail"/>
-                            <input type="text" placeholder='Email'/>
-                        </div>
-                        <div className="cart-sidebar_client-info__element">
-                            <img src="" alt="organization"/>
-                            <input type="text" placeholder='Организация / ИНН'/>
-                        </div>
-
-                    </div>
-                    <div className="cart-sidebar_order">
-                        <div className='cart-sidebar_order__total' >
-                            <div>
-                                Итого
-                            </div>
-                            <div>
-                                Сумма
-                            </div>
-                        </div>
+            <div className="cart-wrapper">
+                {products.map((product) => (
+                    <ProductItem {...product} changeProduct={changeProduct} key={product.id}/>
+                ))}
+                <div className="cart-sidebar-wrapper">
+                    <h3>Заказ</h3>
+                    <div className="cart-sidebar-wrapper__contact-info">
                         <div>
+                            <span>Контактная информация</span>
+                        </div>
+                        <div className="cart-sidebar-wrapper__contact-info_element">
+                            <div className="cart-sidebar-wrapper__contact-info_element_logo">
+                                <img src={PersonImg} alt=""/>
+                            </div>
+                            <div className="cart-sidebar-wrapper__contact-info_element_input">
+                                <input type="text" placeholder='Иванов Иван Иванович'/>
+                            </div>
+
+                        </div>
+                        <div className="cart-sidebar-wrapper__contact-info_element">
+                            <div className="cart-sidebar-wrapper__contact-info_element_logo">
+                                <img src={PhoneSide} alt=""/>
+                            </div>
+                            <div className="cart-sidebar-wrapper__contact-info_element_input">
+                                <input type="text" placeholder='Номер телефона'/>
+                            </div>
+
+                        </div>
+                        <div className="cart-sidebar-wrapper__contact-info_element">
+                            <div className="cart-sidebar-wrapper__contact-info_element_logo">
+                                <img src={AtSign} alt=""/>
+                            </div>
+                            <div className="cart-sidebar-wrapper__contact-info_element_input">
+                                <input type="text" placeholder='Email'/>
+                            </div>
+
+                        </div>
+                        <div className="cart-sidebar-wrapper__contact-info_element">
+                            <div className="cart-sidebar-wrapper__contact-info_element_logo">
+                                <img src={BriefCase} alt=""/>
+                            </div>
+                            <div className="cart-sidebar-wrapper__contact-info_element_input">
+                                <input type="text" placeholder='Организация / ИНН'/>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div className="cart-sidebar_order">
+                        <div className='cart-sidebar_order__total'>
+                            <div>
+                                Сумма {totalSum}
+                            </div>
+                        </div>
+                        <div className='cart-sidebar_order__buttons'>
                             <button>
-                                <img src="" alt="cart"/>
+                                <img src={CartImage} alt="cart"/>
                                 Оформить заказ
                             </button>
                             <button>
-                                <img src="" alt="file"/>
+                                <img src={FileImage} alt="file"/>
                                 Коммерческое предложение
                             </button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>);
 }

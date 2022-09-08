@@ -4,6 +4,12 @@
 @import "styles/Route";
 @import "styles/CatalogBody";
 @import "styles/Products";
+@import "styles/ProductItem";
+@import "styles/Cart";
+@import "styles/CatalogButton";
+@import "styles/FavoritesHeader";
+@import "styles/CartHeader";
+@import "styles/Footer";
 
 .app-wrapper {
   margin: 0 auto;
@@ -12,6 +18,9 @@
   font-weight: lighter;
   background-color: #E5E5E5;
   color: black;
+  overflow-y: scroll;
+
+
   a {
     color: black;
     text-decoration: none;

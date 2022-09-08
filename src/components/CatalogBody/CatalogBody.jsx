@@ -3,14 +3,22 @@ import React from "react";
 import MetalCascade from '../../images/e83b3ba7a7f3f3856bb925a1de52ec51 1.png'
 import Fence from '../../images/noroot.png'
 import Rectangle from '../../images/RectangleCatalogItems.png'
-
+import Sklad from '../../images/Sklad.png'
+import Stolb from '../../images/Stolb.png'
+import Estakada from '../../images/Estakada.png'
+import Opori from '../../images/opori.png'
+import Lestni from '../../images/let-2 1.png'
+import Armatura from '../../images/armatura 1.png'
+import Fasad from '../../images/ocinkovannaya-podkonstrukciya-dlya-ventfasadov 1.png'
+import Mebel from '../../images/mebel.png'
+import Emkost from '../../images/unnamed 1.png'
+import FooterInfo from '../../images/Footer.png'
 
 
 export const CatalogBody = () => {
     return (
         <div className='catalog-body__wrapper'>
             <h1>Каталог товаров</h1>
-
             <div className="catalog-wrapper">
                 <div className="catalog-wrapper_list">
                     <div className="catalog-card__upper">
@@ -66,17 +74,36 @@ export const CatalogBody = () => {
                         </div>
                     </div>
                     <div className="catalog-card">
-                        <h3>
+                        <span>
                             Быстровозводимые здания
-                        </h3>
+                        </span>
                         <div>
                             <img src={Rectangle} alt=""/>
                         </div>
-                        <div>
-                            <img src="" alt=""/>
+                        <div className='catalog-card_img'>
+                            <img src={Sklad} alt=""/>
                         </div>
+                    </div>
+                    <div className="catalog-card">
+                        <span>
+                            Высотные сооружения
+                        </span>
                         <div>
-                            <img src="" alt=""/>
+                            <img src={Rectangle} alt=""/>
+                        </div>
+                        <div className='catalog-card_img'>
+                            <img src={Stolb} alt=""/>
+                        </div>
+                    </div>
+                    <div className="catalog-card">
+                        <span>
+                            Эстакады
+                        </span>
+                        <div>
+                            <img src={Rectangle} alt=""/>
+                        </div>
+                        <div className='catalog-card_img'>
+                            <img src={Estakada} alt=""/>
                         </div>
                     </div>
                     <div className="catalog-card">
@@ -84,77 +111,90 @@ export const CatalogBody = () => {
                             Опоры трубопроводов
                         </span>
                         <div>
-                            <img src="" alt=""/>
+                            <img src={Rectangle} alt=""/>
                         </div>
-                        <div>
-                            <img src="" alt=""/>
-                        </div>
-                    </div>
-                    <div className="catalog-card">
-                        <span>
-                            Опоры трубопроводов
-                        </span>
-                        <div>
-                            <img src="" alt=""/>
-                        </div>
-                        <div>
-                            <img src="" alt=""/>
+                        <div className='catalog-card_img'>
+                            <img src={Opori} alt=""/>
                         </div>
                     </div>
                     <div className="catalog-card">
                         <span>
-                            Опоры трубопроводов
+                            Лестницы
                         </span>
                         <div>
-                            <img src="" alt=""/>
+                            <img src={Rectangle} alt=""/>
                         </div>
-                        <div>
-                            <img src="" alt=""/>
+                        <div className='catalog-card_img'>
+                            <img src={Lestni} alt=""/>
                         </div>
                     </div>
                     <div className="catalog-card">
                         <span>
-                            Опоры трубопроводов
+                            Конструкции для ЖБИ
                         </span>
                         <div>
-                            <img src="" alt=""/>
+                            <img src={Rectangle} alt=""/>
                         </div>
-                        <div>
-                            <img src="" alt=""/>
+                        <div className='catalog-card_img'>
+                            <img src={Armatura} alt=""/>
                         </div>
                     </div>
                     <div className="catalog-card">
                         <span>
-                            Опоры трубопроводов
+                            Фасадные конструкции
                         </span>
                         <div>
-                            <img src="" alt=""/>
+                            <img src={Rectangle} alt=""/>
                         </div>
+                        <div className='catalog-card_img'>
+                            <img src={Fasad} alt=""/>
+                        </div>
+                    </div>
+                    <div className="catalog-card">
+                        <span>
+                            Мебельные конструкции
+                        </span>
                         <div>
-                            <img src="" alt=""/>
+                            <img src={Rectangle} alt=""/>
+                        </div>
+                        <div className='catalog-card_img'>
+                            <img src={Mebel} alt=""/>
+                        </div>
+                    </div>
+                    <div className="catalog-card">
+                        <span>
+                            Емкости и резервуары
+                        </span>
+                        <div>
+                            <img src={Rectangle} alt=""/>
+                        </div>
+                        <div className='catalog-card_img'>
+                            <img src={Emkost} alt=""/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="callBack-wrapper">
-                <div className="callBack-content">
-                    <div>
-                        <input type="text"/>
-                    </div>
-                    <div>
-                        <input type="text"/>
-                    </div>
-                    <div>
-                        <div>
-                            <button>Заказать звонок</button>
-                        </div>
-                        <div>Нажимая на кнопку вы соглашаетесь <br/>
-                            с политикой конфеденциальности
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            {/*<div className="callBack-wrapper">*/}
+            {/*    <div className="callBack-content">*/}
+            {/*        <div>*/}
+            {/*            <input type="text" placeholder='Ваше имя'/>*/}
+            {/*        </div>*/}
+            {/*        <div>*/}
+            {/*            <input type="text" placeholder='Ваш телефон'/>*/}
+            {/*        </div>*/}
+            {/*        <div className='callBack-content_button'>*/}
+            {/*            <div>*/}
+            {/*                <button>Заказать звонок</button>*/}
+            {/*            </div>*/}
+            {/*            <div>Нажимая на кнопку вы соглашаетесь <br/>*/}
+            {/*                <span> с политикой конфеденциальности </span>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+            {/*<div className="catalog-footer-wrapper">*/}
+            {/*    <img src={FooterInfo} alt=""/>*/}
+            {/*</div>*/}
         </div>
     )
 }
