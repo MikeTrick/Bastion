@@ -16,26 +16,32 @@
       justify-content: flex-end;
       align-items: center;
 
-      &__item {
+      &__items {
         display: flex;
-        justify-content: space-around;
         align-items: center;
+        justify-content: space-around;
 
+        .header-info-bar__item {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 10px;
 
-        &_number {
-          margin-left: 10px;
-          font-weight: bold;
-        }
+          &_number {
+            margin-left: 10px;
+            font-weight: bold;
+          }
 
-        &_city {
-          margin-right: 10px;
-          margin-left: 10px;
-          color: red;
-        }
+          &_city {
+            margin-right: 10px;
+            margin-left: 10px;
+            color: red;
+          }
 
-        span {
-          color: #333333;
-          margin-left: 10px;
+          span {
+            color: #333333;
+            margin-left: 10px;
+          }
         }
       }
 

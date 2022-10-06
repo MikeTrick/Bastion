@@ -10,6 +10,7 @@ import PersonImg from '../../images/user.png'
 import PhoneSide from '../../images/phone2.png'
 import AtSign from '../../images/at-sign.png'
 import BriefCase from '../../images/briefcase.png'
+import WhiteCart from '../../images/Union.png'
 
 export const Cart = () => {
     const products = useSelector(getCartState.cartProductsSelector);
@@ -53,7 +54,6 @@ export const Cart = () => {
                             <div className="cart-sidebar-wrapper__contact-info_element_input">
                                 <input type="text" placeholder='Номер телефона'/>
                             </div>
-
                         </div>
                         <div className="cart-sidebar-wrapper__contact-info_element">
                             <div className="cart-sidebar-wrapper__contact-info_element_logo">
@@ -79,18 +79,23 @@ export const Cart = () => {
                     <div className="cart-sidebar_order">
                         <div className='cart-sidebar_order__total'>
                             <div>
-                                Сумма {totalSum}
+                                <span>Итого</span>
+                            </div>
+                            <div>
+                                {totalSum} руб.
                             </div>
                         </div>
                         <div className='cart-sidebar_order__buttons'>
                             <button>
-                                <img src={CartImage} alt="cart"/>
+                                <img src={WhiteCart} alt="cart"/>
                                 Оформить заказ
                             </button>
+                            <div className='cart-sidebar_order__buttons_commercial'>
                             <button>
                                 <img src={FileImage} alt="file"/>
                                 Коммерческое предложение
                             </button>
+                            </div>
                         </div>
                     </div>
                 </div>

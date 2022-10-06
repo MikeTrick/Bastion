@@ -31,23 +31,23 @@ export const Header = () => {
                                 +7 (499) 380-78-90
                             </div>
                         </div>
-                    </div>
-                    <div className="header-info-bar__item">
-                        <div>
-                            <img src={MapPointer} alt=""/>
+                        <div className="header-info-bar__item">
+                            <div>
+                                <img src={MapPointer} alt=""/>
+                            </div>
+                            <div className="header-info-bar__item_city">
+                                Москва
+                            </div>
+                            <div>
+                                <img src={ArrowDown} alt=""/>
+                            </div>
                         </div>
-                        <div className="header-info-bar__item_city">
-                            Москва
+                        <div className="header-info-bar__item">
+                            <div>
+                                <img src={Letter} alt=""/>
+                            </div>
+                            <span> info@bastion.pro </span>
                         </div>
-                        <div>
-                            <img src={ArrowDown} alt=""/>
-                        </div>
-                    </div>
-                    <div className="header-info-bar__item">
-                        <div>
-                            <img src={Letter} alt=""/>
-                        </div>
-                        <span> info@bastion.pro </span>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@ export const Header = () => {
                         <div>
                             <img src={BastionLogo} alt=""/>
                         </div>
-                            <span>
+                        <span>
                                 Производитель <br/> металлических <br/> изделий №1
                             </span>
                     </div>
